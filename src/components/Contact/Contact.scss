@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+
+@mixin Fields() {
+  background-color: $timeline-box-color;
+  border: none;
+  box-shadow: none !important;
+  color: $content-font-color;
+  width: 70% !important;
+  margin: 0 auto;
+}
+
+.Contact {
+  @include Section-style($sections-background-color);
+
+  input {
+    @include Fields();
+  }
+
+  textarea {
+    @include Fields();
+  }
+
+  .btn {
+    background: none !important;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-shadow: none;
+    color: $content-font-color;
+    margin-top: 20px;
+  }
+
+  .btn:hover, .btn:focus, .btn.active {
+    color: $main-title-font-color;
+  }
+
+  .glyphicon-refresh {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Contact {
+    input {
+      width: 95% !important;
+    }
+
+    textarea {
+      width: 95% !important;
+    }
+  }
+}

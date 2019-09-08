@@ -1,0 +1,82 @@
+@import "variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: $page-color;
+}
+
+.Title-description {
+  color: $icon-color;
+  position: relative;
+  top: -55px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.Title-description:after {
+  position: absolute;
+  height: 1px;
+  content: '';
+  width: 100%;
+  background-color: $timeline-rule-color;
+  right: 0;
+  left: 0;
+  bottom: -11px;
+}
+
+a {
+  color: $main-title-font-color;
+}
+
+a:active, a:hover, a:visited {
+  color: $hover-font-color;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h3 {
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}

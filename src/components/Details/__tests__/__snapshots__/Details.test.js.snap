@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Details /> renders <Details /> component 1`] = `
+<div
+  className="Details"
+  id="details"
+>
+  <div
+    className="container container"
+  >
+    <div
+      className="show-grid row"
+    >
+      <div
+        className="col-md-4"
+      >
+        <h5>
+          <span
+            className="Glyphicon-color glyphicon glyphicon-heart"
+          />
+            
+          Motivoitunut
+        </h5>
+        <p>
+          Nautin ohjelmoinnista ja seuraan teknologioiden kehittymistä eri medioiden välityksellä. Vapaa-ajallani touhuan mm. Raspberry Pi:n kanssa ja olen mukana sekalaisissa ohjelmointiprojekteissa.
+        </p>
+      </div>
+      <div
+        className="col-md-4"
+      >
+        <h5>
+          <span
+            className="Glyphicon-color glyphicon glyphicon-star"
+          />
+            
+          Full Stack
+        </h5>
+        <p>
+          Minulta löytyy monipuolista osaamista aina asiakasrajapinnasta sovelluksen tuotantoon vientiin asti. Pystyn työskentelemään mm. seuraavilla työkaluilla: Spring, Mocha, Node.js, Koa.js, Linux ja Atlassian tuotteet.
+        </p>
+      </div>
+      <div
+        className="col-md-4"
+      >
+        <h5>
+          <span
+            className="Glyphicon-color glyphicon glyphicon-fire"
+          />
+            
+          Tiimipelaaja
+        </h5>
+        <p>
+          Yksilö tarvitsee tiimiä ja tiimi tarvitsee yksilöitä. En ole itse tiimin äänekkäin yksilö, mutta tulen erinomaisesti toimeen erilaisten ihmisten kanssa. Mikä olisikaan parempaa kuin saavuttaa yhteinen tavoite yhdessä.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

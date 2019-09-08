@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+.Return-to-top {
+  background: $icon-color;
+  position: fixed;
+  bottom: 35px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  display: none;
+}
+
+.Return-to-top .glyphicon {
+  color: $main-title-font-color;
+  position: relative;
+  left: 16px;
+  top: 14px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 991px) {
+  .Return-to-top:hover .glyphicon {
+    top: 12px;
+  }
+}

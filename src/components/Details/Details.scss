@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+.Details {
+  @include Section-style($sections-background-color);
+
+  h5 {
+    @include H-style(uppercase);
+    margin-bottom: 12px;
+  }
+
+  .Glyphicon-color {
+    color: $icon-color;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Details {
+    p {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+}

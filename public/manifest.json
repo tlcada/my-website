@@ -1,0 +1,15 @@
+{
+  "short_name": "My Website",
+  "name": "My Website",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "252x250",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "browser",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}

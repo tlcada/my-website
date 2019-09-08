@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Referees /> renders <Referees /> component 1`] = `
+<div
+  className="Referees"
+  id="referees"
+>
+  <div
+    className="container container"
+  >
+    <h3>
+      Suosittelijat
+    </h3>
+    <span
+      className="Title-description"
+    >
+      Minua suosittelevat seuraavat henkilöt
+    </span>
+    <div
+      className="show-grid row"
+    >
+      <div
+        className="Referees-content col-md-4"
+      >
+        <img
+          alt=""
+          src="ari.kokkonen.jpg"
+        />
+        <h5>
+          Ari Kokkonen, Tuotepäällikkö
+        </h5>
+        <a
+          href="https://www.rejlers.fi/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Rejlers Oy"
+        >
+          Rejlers Oy
+        </a>
+      </div>
+      <div
+        className="Referees-content col-md-4"
+      >
+        <img
+          alt=""
+          src="ari.jarvinen.jpg"
+        />
+        <h5>
+          Ari Järvinen, Toimitusjohtaja
+        </h5>
+        <a
+          href="https://lamit.fi/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Osakehyhtiö Lamit.fi"
+        >
+          Osakehyhtiö Lamit.fi
+        </a>
+      </div>
+      <div
+        className="Referees-content col-md-4"
+      >
+        <img
+          alt=""
+          src="laura.raehalme.jpg"
+        />
+        <h5>
+          Laura Rauhelme, Tuotepäällikkö
+        </h5>
+        <a
+          href="http://www.aitiofinland.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Aitio Finland Oy"
+        >
+          Aitio Finland Oy
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

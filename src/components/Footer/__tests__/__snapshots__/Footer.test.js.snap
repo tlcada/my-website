@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders <Footer /> component 1`] = `
+<div
+  className="Footer"
+>
+  <div
+    className="container"
+  >
+    <p>
+      Petteri Aho, Ohjelmistosuunnittelija, Vantaa
+    </p>
+    <p>
+      © 
+      2019
+      . All rights reserved.
+    </p>
+  </div>
+</div>
+`;

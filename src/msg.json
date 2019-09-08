@@ -1,0 +1,75 @@
+{
+  "header": {
+    "title": "Petteri Aho",
+    "navbar": ["Minusta", "Portfolio", "Aikajana", "Suosittelijat", "Yhteydenotto"],
+    "subTitle": "Feel the power",
+    "technologies": "Spring / React / PostgreSQL / Git / Jenkins",
+    "seeMore": {
+      "url": "https://fi.linkedin.com/in/petteriaho",
+      "title": "LinkedIn Profile"
+    }
+  },
+  "details": [
+    { "title": "Motivoitunut", "icon": "heart", "description": "Nautin ohjelmoinnista ja seuraan teknologioiden kehittymistä eri medioiden välityksellä. Vapaa-ajallani touhuan mm. Raspberry Pi:n kanssa ja olen mukana sekalaisissa ohjelmointiprojekteissa." },
+    { "title": "Full Stack", "icon": "star", "description": "Minulta löytyy monipuolista osaamista aina asiakasrajapinnasta sovelluksen tuotantoon vientiin asti. Pystyn työskentelemään mm. seuraavilla työkaluilla: Spring, Mocha, Node.js, Koa.js, Linux ja Atlassian tuotteet." },
+    { "title": "Tiimipelaaja", "icon": "fire", "description": "Yksilö tarvitsee tiimiä ja tiimi tarvitsee yksilöitä. En ole itse tiimin äänekkäin yksilö, mutta tulen erinomaisesti toimeen erilaisten ihmisten kanssa. Mikä olisikaan parempaa kuin saavuttaa yhteinen tavoite yhdessä." }
+  ],
+  "portfolio": {
+    "title": "Portfolio",
+    "titleDescription": "Katso lisää klikkaamalla laatikkoa",
+    "mainObject": {
+      "url": "https://www.matkakeisari.fi/",
+      "name": "Matkakeisari - EXIT",
+      "description": "Matkakeisari on bussien ja junien hintavertailusivu. Matkakeisari pitää huolen, että suomalaiset eivät enää koskaan maksa ylihintaa pitkän matkan liikenteestä Suomessa. Taistelemme yksityisautoilua ja tyhjiä julkisia kulkuneuvoja vastaan helpottamalla bussi- ja junavuorojen hintavertailua."
+    },
+    "subObject": [
+      { "url": "https://github.com/tlcada", "name": "GitHub/tlcada", "icon": "thumbs-up" },
+      { "url": "http://pitsanaattori.petteriaho.com/", "name": "Pitsanaattori", "icon": "flash" },
+      { "url": ".", "name": "", "icon": "question-sign" },
+      { "url": ".", "name": "", "icon": "question-sign" }
+    ]
+  },
+  "timeline": {
+    "title": "Aikajana",
+    "titleDescription": "Katso lisää klikkaamalla laatikkoa",
+    "cv": [
+      { "time": "2009–2013", "title": "JAMK - Tietojenkäsittelyn tradenomi", "content": null, "icon": "education" },
+      { "time": "1–5/2012", "title": "Ohjelmistosuunnittelija, Aitio Finland Oy", "content": "Java EE, Maven, Vaadin, Linux ja PostgreSQL", "icon": null },
+      { "time": "24.5.2012", "title": "IBM Best Student Recognition", "content": "Vuonna 2012 palkinnon saivat Ella Hyvärinen ja Ville Saarinen Tampereen teknilliseltä yliopistolta, Matias Halmeenmäki Aalto yliopistolta sekä Petteri Aho Jyväskylän ammattikorkeakoulusta.", "icon": "star" },
+      { "time": "2013–2015", "title": "JYU - Kauppatieteiden maisteri", "content": "Tietojärjestelmätiede, liiketoimintaosaamisen perusteet ja rahoituksen opintokokonaisuus", "icon": "education" },
+      { "time": "2013–2015", "title": "Ohjelmistosuunnittelija, osakeyhtiö Lamit.fi", "content": "PHP, MySQL, REST, HTML5 ja JavaScript", "icon": null },
+      { "time": "2-6/2015", "title": "Erasmus-opiskelijavaihto, Mariborin yliopisto, Slovenia", "content": null, "icon": "education" },
+      { "time": "2015–", "title": "Ohjelmistosuunnittelija, Rejlers Oy", "content": "Spring, OAuth2, REST API, React/Redux ja Node.js/Koa.js", "icon": null },
+	  { "time": "2015–2019", "title": "Koodikeisari & Co-founder, Matkakeisari.fi", "content": "Angular, Express.js ja AWS", "icon": null },
+	  { "time": "11/2017", "title": "Lights On - Industryhack, Fingrid", "content": "Fingridin ensimmäinen hackathon tuotti erinomaisia ratkaisuehdotuksia sähköjärjestelmän kehittämiseksi. Seitsemän tiimin joukosta valittiin neljä tiimiä jatkopilotteihin, joista yksi oli Koodikeisarit. Tiimiin kuuluu Petteri Aho, Maisa Kalliokoski ja Jari Laari.", "icon": "star" },
+	  { "time": "2018-", "title": "MPK - Kyber", "content": "Erinäisten kyberturvallisuustaitojen kehittäminen.", "icon": "eye-open" }
+    ]
+  },
+  "referees": {
+    "title": "Suosittelijat",
+    "titleDescription": "Minua suosittelevat seuraavat henkilöt",
+    "persons": [
+      { "name": "Ari Kokkonen, Tuotepäällikkö", "company": "Rejlers Oy", "url": "https://www.rejlers.fi/", "img": "ari.kokkonen.jpg" },
+      { "name": "Ari Järvinen, Toimitusjohtaja", "company": "Osakehyhtiö Lamit.fi", "url": "https://lamit.fi/", "img": "ari.jarvinen.jpg" },
+      { "name": "Laura Rauhelme, Tuotepäällikkö", "company": "Aitio Finland Oy", "url": "http://www.aitiofinland.com/", "img": "laura.raehalme.jpg" }
+    ]
+  },
+  "contact": {
+    "title": "Yhteydenotto",
+    "titleDescription": "Jätä viesti, niin otan sinuun yhteyttä",
+    "sendButton": "Lähetä",
+    "form": {
+      "name": "Nimi",
+      "email": "Sähköpostiosoite",
+      "title": "Otsikko",
+      "message": "Viesti"
+    },
+    "maxLengthError": "Computer says no",
+    "sending": "Viestiä lähetetään. Odota hetki...",
+    "sendFail": "Viestin lähettäminen epäonnistui. Yritä uudelleen.",
+    "sendSuccess": "Kiitos viestistäsi! Vastaan mahdollisimman pian."
+  },
+  "footer": {
+    "me": "Petteri Aho, Ohjelmistosuunnittelija, Vantaa"
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.Referees {
+  @include Section-style('');
+
+  h5 {
+    @include H-style(capitalize);
+    margin-bottom: 12px;
+  }
+
+  img {
+    height: 120px;
+    width: auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Referees-content {
+    margin-bottom: 30px;
+  }
+}

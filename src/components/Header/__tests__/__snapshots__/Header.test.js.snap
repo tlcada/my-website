@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders <Header /> component 1`] = `
+<div>
+  <nav
+    className="Navbar-style navbar navbar-default"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="navbar-header"
+      >
+        <p
+          className="navbar-brand"
+        >
+          <img
+            alt=""
+            src="logo.png"
+          />
+           
+          Petteri Aho
+        </p>
+        <button
+          className="navbar-toggle collapsed"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="sr-only"
+          >
+            Toggle navigation
+          </span>
+          <span
+            className="icon-bar"
+          />
+          <span
+            className="icon-bar"
+          />
+          <span
+            className="icon-bar"
+          />
+        </button>
+      </div>
+      <div
+        aria-expanded={null}
+        className="navbar-collapse collapse"
+      >
+        <ul
+          className="nav navbar-nav navbar-right"
+        >
+          <li>
+            <a
+              name="Minusta"
+              onClick={[Function]}
+            >
+              Minusta
+            </a>
+          </li>
+          <li>
+            <a
+              name="Portfolio"
+              onClick={[Function]}
+            >
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              name="Aikajana"
+              onClick={[Function]}
+            >
+              Aikajana
+            </a>
+          </li>
+          <li>
+            <a
+              name="Suosittelijat"
+              onClick={[Function]}
+            >
+              Suosittelijat
+            </a>
+          </li>
+          <li>
+            <a
+              name="Yhteydenotto"
+              onClick={[Function]}
+            >
+              Yhteydenotto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="Header"
+  >
+    <div
+      className="Header-content"
+    >
+      <h3>
+        Feel the power
+      </h3>
+      <p>
+        Spring / React / PostgreSQL / Git / Jenkins
+      </p>
+      <a
+        href="https://fi.linkedin.com/in/petteriaho"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="LinkedIn Profile"
+      >
+        LinkedIn Profile
+      </a>
+    </div>
+  </div>
+</div>
+`;

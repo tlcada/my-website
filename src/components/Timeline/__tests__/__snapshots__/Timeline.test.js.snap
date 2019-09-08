@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Timeline /> renders <Timeline /> component 1`] = `
+<div
+  className="Timeline"
+  id="timeline"
+>
+  <div
+    className="container"
+  >
+    <h3>
+      Aikajana
+    </h3>
+    <div
+      className="Main-content"
+    >
+      <div
+        className="Container Box-Left"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-education"
+            />
+             
+            JAMK - Tietojenkäsittelyn tradenomi
+          </h4>
+          <p />
+          <span
+            className="Year-right"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2009–2013
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Right"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            
+             
+            Ohjelmistosuunnittelija, Aitio Finland Oy
+          </h4>
+          <p>
+            Java EE, Maven, Vaadin, Linux ja PostgreSQL
+          </p>
+          <span
+            className="Year-left"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            1–5/2012
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Left"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-star"
+            />
+             
+            IBM Best Student Recognition
+          </h4>
+          <p>
+            Vuonna 2012 palkinnon saivat Ella Hyvärinen ja Ville Saarinen Tampereen teknilliseltä yliopistolta, Matias Halmeenmäki Aalto yliopistolta sekä Petteri Aho Jyväskylän ammattikorkeakoulusta.
+          </p>
+          <span
+            className="Year-right"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            24.5.2012
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Right"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-education"
+            />
+             
+            JYU - Kauppatieteiden maisteri
+          </h4>
+          <p>
+            Tietojärjestelmätiede, liiketoimintaosaamisen perusteet ja rahoituksen opintokokonaisuus
+          </p>
+          <span
+            className="Year-left"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2013–2015
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Left"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            
+             
+            Ohjelmistosuunnittelija, osakeyhtiö Lamit.fi
+          </h4>
+          <p>
+            PHP, MySQL, REST, HTML5 ja JavaScript
+          </p>
+          <span
+            className="Year-right"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2013–2015
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Right"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-education"
+            />
+             
+            Erasmus-opiskelijavaihto, Mariborin yliopisto, Slovenia
+          </h4>
+          <p />
+          <span
+            className="Year-left"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2-6/2015
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Left"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            
+             
+            Ohjelmistosuunnittelija, Rejlers Oy
+          </h4>
+          <p>
+            Spring, OAuth2, REST API, React/Redux ja Node.js/Koa.js
+          </p>
+          <span
+            className="Year-right"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2015–
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Right"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            
+             
+            Koodikeisari & Co-founder, Matkakeisari.fi
+          </h4>
+          <p>
+            Angular, Express.js ja AWS
+          </p>
+          <span
+            className="Year-left"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2015–2019
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Left"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-star"
+            />
+             
+            Lights On - Industryhack, Fingrid
+          </h4>
+          <p>
+            Fingridin ensimmäinen hackathon tuotti erinomaisia ratkaisuehdotuksia sähköjärjestelmän kehittämiseksi. Seitsemän tiimin joukosta valittiin neljä tiimiä jatkopilotteihin, joista yksi oli Koodikeisarit. Tiimiin kuuluu Petteri Aho, Maisa Kalliokoski ja Jari Laari.
+          </p>
+          <span
+            className="Year-right"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            11/2017
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Box-Right"
+      >
+        <div
+          className="Sub-content"
+        >
+          <h4>
+            <span
+              className="glyphicon glyphicon-eye-open"
+            />
+             
+            MPK - Kyber
+          </h4>
+          <p>
+            Erinäisten kyberturvallisuustaitojen kehittäminen.
+          </p>
+          <span
+            className="Year-left"
+          >
+            <span
+              className="glyphicon glyphicon-time"
+            />
+             
+            2018-
+          </span>
+        </div>
+      </div>
+      <div
+        className="Container Final-point"
+      />
+    </div>
+  </div>
+</div>
+`;

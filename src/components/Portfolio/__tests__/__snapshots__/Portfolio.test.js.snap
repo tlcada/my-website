@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Portfolio /> renders <Portfolio /> component 1`] = `
+<div
+  className="Portfolio"
+  id="portfolio"
+>
+  <div
+    className="container container"
+  >
+    <h3>
+      Portfolio
+    </h3>
+    <span
+      className="Title-description"
+    >
+      Katso lisää klikkaamalla laatikkoa
+    </span>
+    <div
+      className="show-grid row"
+    >
+      <div
+        className="col-md-12 col-sm-12"
+      >
+        <a
+          href="https://www.matkakeisari.fi/"
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Matkakeisari - EXIT"
+        >
+          <div
+            className="Rectangle"
+          >
+            <div
+              className="Rectangle-content"
+            >
+              <h4>
+                
+                 
+                Matkakeisari - EXIT
+              </h4>
+              <p>
+                Matkakeisari on bussien ja junien hintavertailusivu. Matkakeisari pitää huolen, että suomalaiset eivät enää koskaan maksa ylihintaa pitkän matkan liikenteestä Suomessa. Taistelemme yksityisautoilua ja tyhjiä julkisia kulkuneuvoja vastaan helpottamalla bussi- ja junavuorojen hintavertailua.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      className="show-grid row"
+    >
+      <div
+        className="col-md-3 col-sm-6"
+      >
+        <a
+          href="https://github.com/tlcada"
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="GitHub/tlcada"
+        >
+          <div
+            className="Square"
+          >
+            <div
+              className="Square-content"
+            >
+              <h4>
+                <span
+                  className="glyphicon glyphicon-thumbs-up"
+                />
+                 
+                GitHub/tlcada
+              </h4>
+              <p />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        className="col-md-3 col-sm-6"
+      >
+        <a
+          href="http://pitsanaattori.petteriaho.com/"
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Pitsanaattori"
+        >
+          <div
+            className="Square"
+          >
+            <div
+              className="Square-content"
+            >
+              <h4>
+                <span
+                  className="glyphicon glyphicon-flash"
+                />
+                 
+                Pitsanaattori
+              </h4>
+              <p />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        className="col-md-3 col-sm-6"
+      >
+        <a
+          href="."
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title=""
+        >
+          <div
+            className="Square"
+          >
+            <div
+              className="Square-content"
+            >
+              <h4>
+                <span
+                  className="glyphicon glyphicon-question-sign"
+                />
+                 
+                
+              </h4>
+              <p />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        className="col-md-3 col-sm-6"
+      >
+        <a
+          href="."
+          onClick={[Function]}
+          rel="noopener noreferrer"
+          target="_blank"
+          title=""
+        >
+          <div
+            className="Square"
+          >
+            <div
+              className="Square-content"
+            >
+              <h4>
+                <span
+                  className="glyphicon glyphicon-question-sign"
+                />
+                 
+                
+              </h4>
+              <p />
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

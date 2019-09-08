@@ -1,0 +1,161 @@
+@import "../../variables.scss";
+
+$header-size-xl: 750px;
+$header-size-lg: 550px;
+$header-size-md: 350px;
+$header-content-position: 110px;
+
+.Navbar-style {
+  background-color: $page-color;
+  background-image: none !important;
+  border: none;
+  padding-top: 10px;
+  box-shadow: none !important;
+  margin-bottom: -20px;
+
+  a {
+    text-transform: uppercase;
+    color: $main-title-font-color !important;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  a:active, a:hover {
+    color: $hover-font-color !important;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: $main-title-font-color !important;
+  }
+
+  .navbar-brand > img {
+    padding-right: 10px;
+    height: 47px;
+  }
+}
+
+.Header {
+  height: $header-size-xl;
+  background: url($background-url) no-repeat;
+  background-position: center;
+
+  .Header-content {
+    text-align: center;
+    color: $main-title-font-color;
+    position: relative;
+    top: calc(#{$header-size-xl} - #{$header-content-position});
+
+    a {
+      position: relative;
+      top: -8px;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .Header-content > p:nth-child(2) {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .Header {
+    height: $header-size-lg;
+    background-size: 85%;
+  }
+
+  .Header-content {
+    top: calc(#{$header-size-lg} - #{$header-content-position}) !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Header {
+    height: $header-size-md;
+    background-size: 75%;
+  }
+
+  .Header-content {
+    top: calc(#{$header-size-md} - #{$header-content-position}) !important;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:active {
+    background-color: transparent !important;
+    border: solid 1px $icon-color;
+  }
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: none;
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+
+  .navbar-nav > li {
+    float: none;
+  }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .collapsing {
+    overflow: hidden !important;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    background-color: $page-color;
+    border-top: solid 1px $icon-color !important;
+    border-bottom: solid 1px $icon-color !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .navbar-collapse {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-toggle {
+    right: 8px;
+  }
+
+  .Header {
+    background-size: cover;
+  }
+}

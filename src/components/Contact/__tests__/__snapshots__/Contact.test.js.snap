@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Contact /> renders <Contact /> component 1`] = `
+<div
+  className="Contact"
+  id="contact"
+>
+  <div
+    className="container"
+  >
+    <h3>
+      Yhteydenotto
+    </h3>
+    <span
+      className="Title-description"
+    >
+      Jätä viesti, niin otan sinuun yhteyttä
+    </span>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          maxLength={20}
+          name="name"
+          onChange={[Function]}
+          placeholder="Nimi *"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          maxLength={65}
+          name="email"
+          onChange={[Function]}
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\\\.[a-z]{2,4}$"
+          placeholder="Sähköpostiosoite *"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <input
+          className="form-control"
+          maxLength={35}
+          name="title"
+          onChange={[Function]}
+          placeholder="Otsikko *"
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <textarea
+          className="form-control"
+          maxLength={800}
+          name="message"
+          onChange={[Function]}
+          placeholder="Viesti *"
+          required={true}
+          rows="7"
+          value=""
+        />
+      </div>
+      <p
+        className="Result-message"
+      >
+        
+          
+        
+      </p>
+      <button
+        className="btn btn-default"
+        disabled={false}
+        type="submit"
+      >
+        Lähetä
+      </button>
+    </form>
+  </div>
+</div>
+`;
