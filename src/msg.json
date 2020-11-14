@@ -49,9 +49,9 @@
     "title": "Suosittelijat",
     "titleDescription": "Minua suosittelevat seuraavat henkilöt",
     "persons": [
-      { "name": "Ari Kokkonen, Tuotepäällikkö", "company": "Rejlers Oy", "url": "https://www.rejlers.fi/", "img": "ari.kokkonen.jpg" },
-      { "name": "Ari Järvinen, Toimitusjohtaja", "company": "Osakehyhtiö Lamit.fi", "url": "https://lamit.fi/", "img": "ari.jarvinen.jpg" },
-      { "name": "Laura Rauhelme, Tuotepäällikkö", "company": "Aitio Finland Oy", "url": "http://www.aitiofinland.com/", "img": "laura.raehalme.jpg" }
+      { "name": "Ari Kokkonen, Tuotepäällikkö", "company": "Rejlers Oy", "url": "https://www.rejlers.fi/", "img": "user.png" },
+      { "name": "Ari Järvinen, Toimitusjohtaja", "company": "Osakehyhtiö Lamit.fi", "url": "https://lamit.fi/", "img": "user.png" },
+      { "name": "Laura Rauhelme, Tuotepäällikkö", "company": "Aitio Finland Oy", "url": "http://www.aitiofinland.com/", "img": "user.png" }
     ]
   },
   "contact": {
@@ -70,6 +70,6 @@
     "sendSuccess": "Kiitos viestistäsi! Vastaan mahdollisimman pian."
   },
   "footer": {
-    "me": "Petteri Aho, Ohjelmistosuunnittelija, Vantaa"
+    "me": "Petteri Aho"
   }
 }
