@@ -1,13 +1,13 @@
 # My Website
 
-The basic commands are listed below.
+[petteriaho.com](https://petteriaho.com/)
 
 ## Create .env file in root dir
 
-REACT_APP_GA_CODE=
-FAST_REFRESH=false
-REACT_APP_MOCK_DATA_ON=false
-PORT=3000
+- REACT_APP_GA_CODE=
+- FAST_REFRESH=false
+- REACT_APP_MOCK_DATA_ON=false
+- PORT=3000
 
 ## How to use mock data
 
