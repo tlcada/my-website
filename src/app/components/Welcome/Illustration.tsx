@@ -8,7 +8,7 @@ export default function Illustration(): React.ReactElement {
     const { t } = useTranslation();
 
     return (
-        <Box sx={{ pt: 8, pb: 6 }}>
+        <Box sx={{ pt: 8 }}>
             <Container maxWidth="sm">
                 <Typography
                     component="h1"

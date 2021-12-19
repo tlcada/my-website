@@ -6,7 +6,6 @@ export default function Collector(): React.ReactElement {
     return(
         <main>
             <Illustration />
-            <hr />
             <Contact />
         </main>
     );

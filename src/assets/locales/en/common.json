@@ -12,7 +12,6 @@
       "linkedIn": "LinkedIn Profile"
     },
     "contact": {
-      "title": "Contact",
       "subtitle": "Leave a message and I'll contact you",
       "form": {
         "name": "Name",

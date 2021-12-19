@@ -30,16 +30,13 @@ export default function Contact(): React.ReactElement {
     });
 
     return (
-        <Box sx={{ pt: 6 }}>
+        <Box sx={{ pt: 4 }}>
             <Container maxWidth="md">
-                <Typography component="h2" align="center" variant="h4">
-                    { t("welcome.contact.title") }
-                </Typography>
                 <Typography align="center" style={{ color: "#8E3235" }} component="div" variant="subtitle2">
                     { t("welcome.contact.subtitle") }
                 </Typography>
 
-                <form noValidate style={{ marginTop: 20 }} onSubmit={ formik.handleSubmit }>
+                <form noValidate style={{ marginTop: 10 }} onSubmit={ formik.handleSubmit }>
                     <Box m={ 1 }>
                         <TextField
                             required
