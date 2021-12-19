@@ -1,0 +1,26 @@
+{
+  "header": {
+    "login": "Login",
+    "language": {
+      "ariaLabel": "Language",
+      "selectedLanguage": "English"
+    }
+  },
+  "welcome": {
+    "illustration": {
+      "title": "Full stack developer",
+      "linkedIn": "LinkedIn Profile"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Leave a message and I'll contact you",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "title": "Title",
+        "message": "Message",
+        "send": "Send"
+      }
+    }
+  }
+}

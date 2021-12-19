@@ -1,0 +1,4 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "REACT_APP_MOCK_DATA_ON": "true"
+}

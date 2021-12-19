@@ -1,0 +1,26 @@
+{
+  "header": {
+    "login": "Kirjaudu",
+    "language": {
+      "ariaLabel": "Kielivalinta",
+      "selectedLanguage": "Suomi"
+    }
+  },
+  "welcome": {
+    "illustration": {
+      "title": "Full stack developer",
+      "linkedIn": "LinkedIn-profiili"
+    },
+    "contact": {
+      "title": "Yhteydenotto",
+      "subtitle": "Jätä viesti, niin otan sinuun yhteyttä",
+      "form": {
+        "name": "Nimi",
+        "email": "Sähköposti",
+        "title": "Otsikko",
+        "message": "Viesti",
+        "send": "Lähetä"
+      }
+    }
+  }
+}
