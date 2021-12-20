@@ -12,7 +12,7 @@ function Copyright() {
 
 export default function Footer() {
     return (
-        <Box sx={{ p: 6 }} component="footer">
+        <Box sx={{ p: 4 }} component="footer">
             <Copyright />
         </Box>
     );
