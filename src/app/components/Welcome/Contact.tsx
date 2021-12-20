@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import { Box, Button, Container, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const validationSchema = Yup.object({
@@ -30,12 +30,8 @@ export default function Contact(): React.ReactElement {
     });
 
     return (
-        <Box sx={{ pt: 3 }}>
+        <Box sx={{ pt: 1 }}>
             <Container maxWidth="md">
-                <Typography align="center" style={{ color: "#8E3235" }} component="div" variant="subtitle2">
-                    { t("welcome.contact.subtitle") }
-                </Typography>
-
                 <form noValidate style={{ marginTop: 10 }} onSubmit={ formik.handleSubmit }>
                     <Box m={ 1 }>
                         <TextField
