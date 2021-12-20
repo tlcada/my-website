@@ -19,12 +19,11 @@ export default function Header(props: PropsType) {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar color="transparent" sx={{ boxShadow: "none" }} position="static">
                 <Toolbar>
-                    <Link to={ RoutesName.default }>
-                        <img aria-hidden="true" style={{ width: 45, marginRight: 10 }} alt="" src={ logo } />
-                    </Link>
-                    <Typography variant="h6" color="primary" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to={ RoutesName.default }>Petteri Aho</Link>
-                    </Typography>
+                    <Box sx={{ flexGrow: 1, pt: 1 }}>
+                        <Link to={ RoutesName.default }>
+                            <img aria-hidden="true" style={{ width: 45, marginRight: 10 }} alt="" src={ logo } />
+                        </Link>
+                    </Box>
                     <LanguageSelector />
                     <ThemeSelect themeSelector={ props.themeSelector }  />
                     <Link to={ RoutesName.login }>{ t("header.login") }</Link>
@@ -46,7 +45,7 @@ function LanguageSelector(): React.ReactElement {
     return (
         <IconButton onClick={ () => changeLanguage() } aria-label={ t("header.language.ariaLabel") } color="inherit">
             <Translate />
-            <Typography sx={{ marginLeft: 1, marginRight: 1 }} color="inherit" component="div">
+            <Typography sx={{ marginLeft: 1 }} color="inherit" component="div">
                 { t("header.language.selectedLanguage") }
             </Typography>
         </IconButton>

@@ -4,11 +4,11 @@ import ReactGA from "react-ga";
 import config from "../../../config/config";
 import { useTranslation } from "react-i18next";
 
-export default function Illustration(): React.ReactElement {
+export default function Presentation(): React.ReactElement {
     const { t } = useTranslation();
 
     return (
-        <Box sx={{ pt: 8 }}>
+        <Box sx={{ pt: 2 }}>
             <Container maxWidth="sm">
                 <Typography
                     component="h1"
@@ -17,11 +17,11 @@ export default function Illustration(): React.ReactElement {
                     color="text.primary"
                     gutterBottom
                 >
-                    { t("welcome.illustration.title") }
+                    { t("welcome.presentation.title") }
                 </Typography>
                 <Stack direction="row" spacing={ 2 } justifyContent="center">
                     <ReactGA.OutboundLink eventLabel="Clicked go to Guard Service button" to={ config.linkedIn.url } target="_blank">
-                        <Button variant="outlined">{ t("welcome.illustration.linkedIn") }</Button>
+                        <Button variant="outlined">{ t("welcome.presentation.linkedIn") }</Button>
                     </ReactGA.OutboundLink>
                 </Stack>
             </Container>

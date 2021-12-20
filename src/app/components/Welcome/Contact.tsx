@@ -30,7 +30,7 @@ export default function Contact(): React.ReactElement {
     });
 
     return (
-        <Box sx={{ pt: 4 }}>
+        <Box sx={{ pt: 3 }}>
             <Container maxWidth="md">
                 <Typography align="center" style={{ color: "#8E3235" }} component="div" variant="subtitle2">
                     { t("welcome.contact.subtitle") }
