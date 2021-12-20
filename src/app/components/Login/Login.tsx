@@ -23,6 +23,7 @@ export default function Login(): React.ReactElement {
         },
         validationSchema: validationSchema,
         onSubmit: async (values, { resetForm }) => {
+            // TODO replace with redux/thunk
             setLogin(true);
             await SnippetUtils.sleep(2000);
             setLogin(false);
