@@ -12,6 +12,10 @@
       "linkedIn": "LinkedIn-profiili"
     },
     "contact": {
+      "email": {
+        "fail": "Sähköpostiviestin lähetys epäonnistui. Yritä myöhemmin uudelleen.",
+        "success": "Kiitos viestistä. Palaan mahdollisimman pian asiaan."
+      },
       "form": {
         "name": "Nimi",
         "email": "Sähköposti",

@@ -1,8 +1,13 @@
 import * as React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Box, Button, Container, TextField } from "@mui/material";
+import { Alert, Box, Button, CircularProgress, Container, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { GeneralErrorResponseType, generalResponseHandler, GeneralResponseHandlerType } from "../../Handler";
+import MockDataHelper from "../../Helper/MockDataHelper";
+import config from "../../../config/config";
+import { post } from "../../Helper/fetchHelper";
+import { useState } from "react";
 
 const validationSchema = Yup.object({
     name: Yup.string().min(2).max(20).required(),
@@ -13,6 +18,8 @@ const validationSchema = Yup.object({
 
 export default function Contact(): React.ReactElement {
     const { t } = useTranslation();
+    const [sendingEmail, setSendingEmail] = useState<boolean>(false);
+    const [emailHasBeenSent, setEmailHasBeenSent] = useState<boolean | undefined>(undefined);
 
     const formik = useFormik({
         initialValues: {
@@ -22,12 +29,37 @@ export default function Contact(): React.ReactElement {
             message: "",
         },
         validationSchema: validationSchema,
-        onSubmit: (values, { resetForm }) => {
-            // alert(JSON.stringify(values, null, 2));
-            alert("This form is work in progress...");
-            resetForm();
+        onSubmit: async (values, { resetForm }) => {
+            setSendingEmail(true);
+
+            const response: GeneralResponseHandlerType = await generalResponseHandler(async () => {
+                const mockData: MockDataHelper = new MockDataHelper(config.mockData.mockDataOn, "response text", "text");
+                const mailHeaders: Headers = new Headers({ "Accept": "application/json", "Content-Type": "application/json;charset=UTF-8" });
+                return await post(`${config.services.mailService.url}/Mail.php`, mailHeaders, JSON.stringify(values), mockData);
+            });
+
+            if (response.successResponse) {
+                // If you need success response: await response.successResponse.text();
+                setEmailHasBeenSent(true);
+                resetForm();
+            } else {
+                const error: GeneralErrorResponseType = response.errorResponse as GeneralErrorResponseType;
+                console.error(`Message: ${error.message} and http code: ${error.httpStatusCode}`);
+                setEmailHasBeenSent(false);
+            }
+
+            setSendingEmail(false);
         },
     });
+
+    let emailSuccessMessage: React.ReactElement = <React.Fragment />;
+    if (emailHasBeenSent !== undefined) {
+        if (emailHasBeenSent) {
+            emailSuccessMessage = <Alert severity="success">{ t("welcome.contact.email.success") }</Alert>;
+        } else {
+            emailSuccessMessage = <Alert severity="error">{ t("welcome.contact.email.fail") }</Alert>;
+        }
+    }
 
     return (
         <Box sx={{ pt: 1 }}>
@@ -92,9 +124,18 @@ export default function Contact(): React.ReactElement {
                     </Box>
 
                     <Box m={ 1 }>
-                        <Button color="inherit" variant="outlined" fullWidth type="submit">
+                        <Button
+                            color="inherit"
+                            variant="outlined"
+                            fullWidth
+                            type="submit"
+                            disabled={ sendingEmail }
+                            startIcon={ sendingEmail && (<CircularProgress size={ 20 } color="inherit" />) }
+                        >
                             { t("welcome.contact.form.send") }
                         </Button>
+
+                        { emailSuccessMessage }
                     </Box>
                 </form>
             </Container>

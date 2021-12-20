@@ -39,7 +39,7 @@
 
 					// Send mail
 					mail($to, $title, $mailMessage, $header);
-					echo json_encode(array("status" => 200));
+					echo json_encode(array("status" => 200, "message" => "success"));
 				} catch (Exception $e) {
 					echo json_encode(array("status" => 500, "message" => $e->getMessage()));
 				}

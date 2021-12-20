@@ -12,6 +12,10 @@
       "linkedIn": "LinkedIn Profile"
     },
     "contact": {
+      "email": {
+        "fail": "Failed to send email. Try again later.",
+        "success": "Thank you for your message. I will get back to you as soon as possible."
+      },
       "form": {
         "name": "Name",
         "email": "Email",

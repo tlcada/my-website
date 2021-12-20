@@ -17,6 +17,13 @@ describe("config", () => {
                 mailService: {
                     url: "server"
                 }
+            },
+            mockData: {
+                mockDataOn: false,
+                useErrorResponse: false,
+                slowConnection: {
+                    waitMs: 500
+                },
             }
         };
 
