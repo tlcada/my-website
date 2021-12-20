@@ -134,7 +134,9 @@ export default function Contact(): React.ReactElement {
                         >
                             { t("welcome.contact.form.send") }
                         </Button>
+                    </Box>
 
+                    <Box m={ 1 }>
                         { emailSuccessMessage }
                     </Box>
                 </form>
