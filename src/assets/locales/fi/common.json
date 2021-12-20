@@ -24,5 +24,14 @@
         "send": "Lähetä"
       }
     }
+  },
+  "login": {
+    "title": "Kirjaudu sisään",
+    "form": {
+      "username": "Käyttäjätunnus",
+      "password": "Salasana",
+      "login": "Kirjaudu",
+      "fail": "Käyttäjätunnus tai salasana on virheellinen."
+    }
   }
 }

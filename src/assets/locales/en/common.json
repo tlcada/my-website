@@ -24,5 +24,14 @@
         "send": "Send"
       }
     }
+  },
+  "login": {
+    "title": "Log in",
+    "form": {
+      "username": "Username",
+      "password": "Password",
+      "login": "Log in",
+      "fail": "Username or password is incorrect."
+    }
   }
 }

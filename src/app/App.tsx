@@ -7,6 +7,7 @@ import { BasicLayout, TokenHelper, darkThemeOnCookie, RoutesName } from "./Helpe
 import { Theme } from "@mui/material/styles";
 import config from "../config/config";
 import { Welcome } from "./components";
+import { Login } from "./components/Login";
 
 // Init Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -35,10 +36,6 @@ function App(): React.ReactElement {
             </BrowserRouter>
         </ThemeProvider>
     );
-}
-
-function Login() {
-    return <h2>Coming soon...</h2>;
 }
 
 export default App;

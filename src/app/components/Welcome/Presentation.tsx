@@ -21,7 +21,7 @@ export default function Presentation(): React.ReactElement {
                 </Typography>
                 <ReactGA.OutboundLink eventLabel="Clicked go to Guard Service button" to={ config.linkedIn.url } target="_blank">
                     <Typography align="center" style={{ color: "#8E3235", marginTop: -10 }} variant="subtitle1">
-                     { t("welcome.presentation.linkedIn") }
+                        { t("welcome.presentation.linkedIn") }
                     </Typography>
                 </ReactGA.OutboundLink>
             </Container>

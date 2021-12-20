@@ -3,7 +3,7 @@ import config from "../../config/config";
 import { unhandledErrorResponse } from "../Handler";
 import { SnippetUtils } from "../utils";
 
-export const post = async (url: string, headers: Headers, data: string, mockData: MockDataHelper): Promise<Response> | never => {
+export const post = async (url: string, headers: Headers, data: string, mockData: MockDataHelper): Promise<any> | never => {
     return _fetch(mockData, url, {
         method: "POST",
         cache: "no-cache",
