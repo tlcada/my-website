@@ -24,6 +24,7 @@ export default function Login(): React.ReactElement {
         validationSchema: validationSchema,
         onSubmit: async (values, { resetForm }) => {
             // TODO replace with redux/thunk
+            // You can use --template redux-typescript: https://react-redux.js.org/introduction/getting-started
             setLogin(true);
             await SnippetUtils.sleep(2000);
             setLogin(false);
