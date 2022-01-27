@@ -19,11 +19,21 @@ describe("config", () => {
                 }
             },
             mockData: {
-                mockDataOn: false,
-                useErrorResponse: false,
                 slowConnection: {
                     waitMs: 500
                 },
+                mailService: {
+                    sendEmail: {
+                        useErrorResponse: false,
+                        mockDataOn: false
+                    }
+                },
+                auth: {
+                    login: {
+                        useErrorResponse: false,
+                        mockDataOn: false
+                    }
+                }
             }
         };
 

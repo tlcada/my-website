@@ -1,51 +1,68 @@
 import { development } from "../../environment/profile";
-import config from "../../config/config";
+
+type ResponseType = "text" | "json" | "arrayBuffer" | "blob" | "buffer";
 
 type Options = {
     readonly ok: boolean;
     readonly status: number;
+    headers: Headers;
+    [key: string]: any;
 }
 
-const initOptions: Options = {
-    ok: true,
-    status: 200
+export type MockDataConfigType = {
+    readonly slowConnection: {
+        readonly waitMs: number;
+    };
+    readonly mailService: {
+        readonly sendEmail: MockDataApiOperation;
+    };
+    readonly auth: {
+        readonly login: MockDataApiOperation;
+    }
 };
 
+export type MockDataApiOperation = {
+    readonly mockDataOn: boolean;
+    readonly useErrorResponse: boolean;
+};
+
+/**
+ * You can also replace this with Mocks Server.
+ * For example: https://www.mocks-server.org/
+ */
 export default class MockDataHelper {
 
-    private readonly condition: boolean;
-    private readonly mockData: any;
+    private readonly enable: boolean;
+    private readonly responseData: any;
     private readonly responseType: string;
     private readonly options: Options;
 
-    constructor(condition: boolean, mockData: any, responseType: "text" | "json" | "arrayBuffer" | "blob" | "formData", options?: Options) {
-        // This don't never allow using mock data in production
-        this.condition = condition && development;
-        this.mockData = mockData;
+    constructor(operation: MockDataApiOperation, responseData: any, responseType: ResponseType) {
+        this.enable = operation.mockDataOn;
+        this.responseData = responseData;
         this.responseType = responseType;
-        if (!options) {
-            this.options = (config.mockData.useErrorResponse) ? { ok: false, status: 500 } : initOptions;
+
+        if (operation.useErrorResponse) {
+            this.options = { ok: false, status: 500, headers: new Headers() };
         } else {
-            this.options = options;
+            this.options = { ok: true, status: 200, headers: new Headers() };
         }
     }
 
-    public getCondition(): boolean {
-        return this.condition;
+    public enableMockData(): boolean {
+        // && development never allows mock response to be used in production
+        // You can also add logic that tests can use mock data
+        return this.enable && development;
     }
 
-    public getMockData(): any {
-        return this.mockData;
-    }
+    public buildMockDataResponse(): Promise<Response> {
+        const options: Options = this.options;
+        const rawResponseData = this.responseData;
 
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    public buildMockDataResponse(mockData: any): Promise<Response> {
-        const response: any = this.options;
-
-        response[this.responseType] = function (): Promise<any> {
-            return mockData ? Promise.resolve(mockData) : Promise.resolve();
+        options[this.responseType] = function (): Promise<any> {
+            return rawResponseData ? Promise.resolve(rawResponseData) : Promise.resolve();
         };
 
-        return Promise.resolve(response);
+        return Promise.resolve(options as any);
     }
 }

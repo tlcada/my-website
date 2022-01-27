@@ -3,10 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Alert, Box, Button, CircularProgress, Container, TextField } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { GeneralErrorResponseType, generalResponseHandler, GeneralResponseHandlerType } from "../../Handler";
+import { GeneralErrorResponseType, generalResponseHelper, GeneralResponseHelper } from "../../Helper";
 import MockDataHelper from "../../Helper/MockDataHelper";
 import config from "../../../config/config";
-import { post } from "../../Helper/fetchHelper";
+import { post } from "../../utils";
 import { useState } from "react";
 
 const validationSchema = Yup.object({
@@ -32,10 +32,10 @@ export default function Contact(): React.ReactElement {
         onSubmit: async (values, { resetForm }) => {
             setSendingEmail(true);
 
-            const response: GeneralResponseHandlerType = await generalResponseHandler(async () => {
-                const mockData: MockDataHelper = new MockDataHelper(config.mockData.mockDataOn, "response text", "text");
+            const response: GeneralResponseHelper = await generalResponseHelper(async () => {
+                const mockData: MockDataHelper = new MockDataHelper(config.mockData.mailService.sendEmail, "response text", "text");
                 const mailHeaders: Headers = new Headers({ "Accept": "application/json", "Content-Type": "application/json;charset=UTF-8" });
-                return await post(`${config.services.mailService.url}/Mail.php`, mailHeaders, JSON.stringify(values), mockData);
+                return post(`${config.services.mailService.url}/Mail.php`, mailHeaders, JSON.stringify(values), mockData);
             });
 
             if (response.successResponse) {

@@ -1,10 +1,11 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Alert, Box, Button, CircularProgress, Container, TextField, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { SnippetUtils } from "../../utils";
+import { authSelector, AuthState, clearState, loginUser } from "./slices/auth";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 
 const validationSchema = Yup.object({
     username: Yup.string().min(3).max(65).required(),
@@ -13,8 +14,15 @@ const validationSchema = Yup.object({
 
 export default function Login(): React.ReactElement {
     const { t } = useTranslation();
-    const [login, setLogin] = useState<boolean>(false);
-    const [loginFail, setLoginFail] = useState<boolean>(false);
+    const dispatch = useAppDispatch();
+    const auth = useAppSelector(authSelector) as AuthState;
+
+    useEffect(() => {
+        return () => {
+            dispatch(clearState());
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // Call useEffect only once
 
     const formik = useFormik({
         initialValues: {
@@ -23,12 +31,8 @@ export default function Login(): React.ReactElement {
         },
         validationSchema: validationSchema,
         onSubmit: async (values, { resetForm }) => {
-            // TODO replace with redux/thunk
-            // You can use --template redux-typescript: https://react-redux.js.org/introduction/getting-started
-            setLogin(true);
-            await SnippetUtils.sleep(2000);
-            setLogin(false);
-            setLoginFail(true);
+            dispatch(loginUser({ username: values.username, password: values.password }));
+            resetForm();
         },
     });
 
@@ -75,15 +79,15 @@ export default function Login(): React.ReactElement {
                             variant="outlined"
                             fullWidth
                             type="submit"
-                            disabled={ login }
-                            startIcon={ login && (<CircularProgress size={ 20 } color="inherit" />) }
+                            disabled={ auth.fetching }
+                            startIcon={ auth.fetching && (<CircularProgress size={ 20 } color="inherit" />) }
                         >
                             { t("login.form.login") }
                         </Button>
                     </Box>
 
                     <Box m={ 1 }>
-                        { loginFail && <Alert severity="error">{ t("login.form.fail") }</Alert> }
+                        { (auth.error !== undefined) && <Alert severity="error">{ t("login.form.fail") }</Alert> }
                     </Box>
                 </form>
             </Container>

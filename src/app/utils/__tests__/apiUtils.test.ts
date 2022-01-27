@@ -1,15 +1,15 @@
-import { post } from "../fetchHelper";
-import MockDataHelper from "../MockDataHelper";
+import { post } from "../apiUtils";
+import { MockDataHelper } from "../../Helper";
 
 const validPath = "https://reqres.in/api";
 const invaliPath = "https://invalid_url/api";
-const mockData: MockDataHelper = new MockDataHelper(false, null, "json");
+const mockData: MockDataHelper = new MockDataHelper({ mockDataOn: false, useErrorResponse: false }, null, "json");
 const data = JSON.stringify({ name: "john" });
 
 const headers: Headers = new Headers();
 headers.set("Content-Type", "application/json");
 
-describe("fetchHelper.ts", () => {
+describe("apiUtils.ts", () => {
 
     describe("post", () => {
         it("post should return single user with valid url", async () => {

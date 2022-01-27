@@ -1,3 +1,5 @@
+import { MockDataConfigType } from "../app/Helper/MockDataHelper";
+
 type ConfigTypes = {
     readonly general: {
         readonly useBlackThemeAsDefault: boolean;
@@ -14,13 +16,7 @@ type ConfigTypes = {
             readonly url: string;
         };
     };
-    readonly mockData: {
-        readonly mockDataOn: boolean;
-        readonly useErrorResponse: boolean;
-        readonly slowConnection: {
-            readonly waitMs: number;
-        };
-    };
+    readonly mockData: MockDataConfigType;
 }
 
 const mockDataOn = process.env.REACT_APP_MOCK_DATA_ON === "true";
@@ -42,11 +38,21 @@ const config: ConfigTypes = {
         }
     },
     mockData: {
-        mockDataOn: mockDataOn,
-        useErrorResponse: false,
         slowConnection: {
             waitMs: 500
         },
+        mailService: {
+            sendEmail: {
+                useErrorResponse: false,
+                mockDataOn: mockDataOn
+            }
+        },
+        auth: {
+            login: {
+                useErrorResponse: false,
+                mockDataOn: mockDataOn
+            }
+        }
     }
 };
 
