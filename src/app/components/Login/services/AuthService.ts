@@ -3,7 +3,7 @@ import MockDataHelper from "../../../Helper/MockDataHelper";
 import config from "../../../../config/config";
 import { post } from "../../../utils";
 
-type Token = {
+type JWT = {
     readonly access_token: string;
     readonly sub: string;
 }
@@ -14,7 +14,7 @@ export type User = {
     readonly email: string;
 }
 
-const tokenMockData: Token = {
+const tokenMockData: JWT = {
     access_token: "uh32i4gh23g5h978325g79u23g5",
     sub: "12345",
 };
@@ -24,9 +24,9 @@ class AuthService {
     async login(username: string, password: string): Promise<User | never> {
         const tokenResponse: GeneralResponseHelper = await this.fetchToken(username, password);
         if (tokenResponse.successResponse) {
-            const token: Token = await tokenResponse.successResponse.json();
-            // TODO store token to local storage or cookies
-            return this.fetchUser(token.access_token);
+            const jwt: JWT = await tokenResponse.successResponse.json();
+            // TODO store jwt: https://indepth.dev/posts/1382/localstorage-vs-cookies
+            return this.fetchUser(jwt.access_token);
         } else {
             const error: GeneralErrorResponseType = tokenResponse.errorResponse as GeneralErrorResponseType;
             throw new Error(error.message);
