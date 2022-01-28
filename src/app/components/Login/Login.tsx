@@ -6,6 +6,7 @@ import { Alert, Box, Button, CircularProgress, Container, TextField, Typography 
 import { useTranslation } from "react-i18next";
 import { authSelector, AuthState, clearState, loginUser } from "./slices/auth";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { useGetPokemonByNameQuery } from "./services/pokemon";
 
 const validationSchema = Yup.object({
     username: Yup.string().min(3).max(65).required(),
@@ -14,6 +15,8 @@ const validationSchema = Yup.object({
 
 export default function Login(): React.ReactElement {
     const { t } = useTranslation();
+    // Using a query hook automatically fetches data and returns query values
+    const { data } = useGetPokemonByNameQuery("bulbasaur");
     const dispatch = useAppDispatch();
     const auth = useAppSelector(authSelector) as AuthState;
 
@@ -88,6 +91,10 @@ export default function Login(): React.ReactElement {
 
                     <Box m={ 1 }>
                         { (auth.error !== undefined) && <Alert severity="error">{ t("login.form.fail") }</Alert> }
+                    </Box>
+
+                    <Box sx={{ visibility: "hidden" }}>
+                        { data && data.species.name }
                     </Box>
                 </form>
             </Container>
